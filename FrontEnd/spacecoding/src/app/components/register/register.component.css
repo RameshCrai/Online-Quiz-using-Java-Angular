@@ -1,0 +1,19 @@
+mat-card{
+    background-color: aliceblue;
+}
+mat-form-field{
+    width: 100%;
+}
+
+.mr{
+    margin-right: 5%;
+}
+.hll{
+    width: 100%;
+}
+.ml{
+    margin-right: 0px;
+}
+.col-md-6{
+    background-color: aliceblue;
+}

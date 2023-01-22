@@ -1,0 +1,13 @@
+.ov{
+    overflow: scroll;
+    height: 180px;
+}
+.s{
+    margin-left: 16px;
+    background-color: black;
+    color: aliceblue;
+    width: 100%;
+}
+.v{
+    height: 670px;
+}

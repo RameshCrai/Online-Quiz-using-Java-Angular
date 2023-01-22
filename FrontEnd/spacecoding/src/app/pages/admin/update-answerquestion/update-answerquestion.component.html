@@ -1,0 +1,81 @@
+<mat-card>
+    <div class="container-fluid text-center">
+      <h2>Update QA</h2>
+      <mat-divider></mat-divider>
+    </div>
+    <mat-card class="mt-2">
+      <form  *ngIf="QAnswer" (ngSubmit)="updateForm()">
+        <mat-form-field
+          appearance="fill"
+          hintLabel="should be character only (max-size: 100)"
+        >
+          <mat-label>Question</mat-label>
+          <input
+          [(ngModel)]="QAnswer.qatitle"
+            name="qatitle"
+            type="text"
+            placeholder="Enter here....."
+            matInput
+            #q
+            maxlength="100"
+            required
+          />
+          <mat-hint align="end">{{ q.value.length || 0 }}/100</mat-hint>
+        </mat-form-field>
+        <mat-form-field
+          appearance="fill"
+          hintLabel="should be character only (max-size: 100)"
+        >
+          <mat-label>Enter the question a </mat-label>
+          <textarea
+          [(ngModel)]="QAnswer.content"
+          name="content"
+            type="text"
+            placeholder="Enter here....."
+            matInput
+            #content
+            maxlength="500"
+            rows="5"
+            required
+          ></textarea>
+          <mat-hint align="end">{{ content.value.length || 0 }}/500</mat-hint>
+        </mat-form-field>
+  
+        <div class="row">
+          <div class="col-md-6">
+            <mat-form-field appearance="fill" hintLabel="Max number 25">
+              <mat-label>Choose one</mat-label>
+              <mat-select required [(ngModel)]="QAnswer.category"  name="category">
+                <mat-option value="java">Java programming</mat-option>
+                <mat-option value="python">Python programming</mat-option>
+                <mat-option value="C#">C# programming</mat-option>
+                <mat-option value="C++">C++ programming</mat-option>
+                <mat-option value="C">C programming</mat-option>
+                <mat-option value="kotlin">Kotlin programming</mat-option>
+                <mat-option value="R">R programming</mat-option>
+                <mat-option value="Angular">Angular Frontend</mat-option>
+                <mat-option value="React">React Frontend</mat-option>
+                <mat-option value="Javascript">Javascript Scripting Language</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="col-md-6">
+            <mat-form-field appearance="fill" hintLabel="File should be 300kb below">
+              <mat-label>file or photo</mat-label>
+              <input 
+              [(ngModel)]="QAnswer.ansquefile"
+              name="ansquefile"
+              type="text" matInput #f maxlength="300" required />
+              <mat-hint align="end">{{f.value.length || 0}}/300</mat-hint>
+            </mat-form-field>
+          </div>
+        </div>
+        <br>
+        <mat-divider></mat-divider><br>
+        <div class="container-fluid text-center">
+          <button mat-raised-button color="accent" type="submit">Update</button>
+        </div>
+      </form>
+    </mat-card>
+  </mat-card>
+  

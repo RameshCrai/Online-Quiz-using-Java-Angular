@@ -1,0 +1,10 @@
+.h{
+    height: 500px;
+}
+mat-card{
+    width: 100%;
+    background-color: darkgrey;
+    left: 0;
+    bottom: 0;
+}
+

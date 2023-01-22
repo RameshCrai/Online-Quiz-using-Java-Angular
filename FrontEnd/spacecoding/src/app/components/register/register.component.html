@@ -1,0 +1,134 @@
+<mat-dialog-actions align="end">
+  <button mat-dialog-close="true">&times;</button>
+</mat-dialog-actions>
+<mat-dialog-content>
+  <div class="container text-center mb-3">
+    <h1>Register here !</h1>
+  </div>
+  <form (ngSubmit)="formsSubmit()">
+    <!-- fullname -->
+    <mat-form-field hintLabel="Max 15 Characters " appearance="fill">
+      <mat-label>FullName</mat-label>
+      <input
+        required
+        [(ngModel)]="user.fullname"
+        name="fullname"
+        type="text"
+        matInput
+        #input
+        maxlength="15"
+        placeholder="Fullname"
+      />
+      <mat-hint align="end">{{ input.value.length || 0 }}/15</mat-hint>
+    </mat-form-field>
+
+    <!-- email -->
+    <mat-form-field hintLabel="Max 20 char email formate " appearance="fill">
+      <mat-label>Email</mat-label>
+      <input
+        required
+        [(ngModel)]="user.email"
+        type="email"
+        name="email"
+        matInput
+        #inpu
+        maxlength="30"
+        placeholder="Email"
+      />
+      <mat-hint align="end">{{ inpu.value.length || 0 }}/30</mat-hint>
+    </mat-form-field>
+    <!-- password-->
+    <mat-form-field hintLabel="Max 12 char/digits" appearance="fill">
+      <mat-label>Password</mat-label>
+      <input
+        required
+        [(ngModel)]="user.password"
+        name="password"
+        type="password"
+        matInput
+        #inp
+        maxlength="12"
+        [type]="hide ? 'password' : 'text'"
+        placeholder="Password"
+      />
+      <button
+        mat-icon-button
+        matSuffix
+        (click)="hide = !hide"
+        [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide"
+      >
+        <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+      </button>
+      <mat-hint align="end">{{ inp.value.length || 0 }}/12</mat-hint>
+    </mat-form-field>
+
+    <!-- phone-->
+    <div class="row">
+      <div class="col-md-6">
+        <mat-form-field class="hll" appearance="fill" hintLabel="Max number 5">
+          <mat-label>Zipcode</mat-label>
+          <mat-select
+            [(ngModel)]="user.zipcode"
+            name="zipcode"
+            required
+            placeholder="Zipcode"
+            #s maxlength="5"
+          >
+            <mat-option value="+977">+977</mat-option>
+            <mat-option value="+92">+92</mat-option>
+            <mat-option value="+35">+35</mat-option>
+          </mat-select>
+          <mat-hint align="end">{{s.value.length || 0}}/5</mat-hint>
+        </mat-form-field>
+      </div>
+      <div class="col-md-6">
+        <mat-form-field
+          class="hll"
+          hintLabel="Max 10 Digits "
+          appearance="fill"
+        >
+          <mat-label>Phone</mat-label>
+          <input
+            required
+            [(ngModel)]="user.phone"
+            name="phone"
+            type="number"
+            matInput
+            #ip
+            maxlength="10"
+            placeholder="Phone Number"
+          />
+          <mat-hint align="end">{{ ip.value.length || 0 }}/10</mat-hint>
+        </mat-form-field>
+      </div>
+    </div>
+    <!-- radio -->
+    <mat-radio-group
+      aria-label="Select an option"
+      [(ngModel)]="user.gender"
+      name="gender"
+      required
+    >
+      <mat-radio-button value="male" class="mr">Male</mat-radio-button>
+      <mat-radio-button value="female" class="ml">Female</mat-radio-button>
+    </mat-radio-group>
+    <mat-divider></mat-divider>
+    <div class="container text-center mt-3">
+      <button
+        mat-raised-button
+        color="primary"
+        style="margin-right: 10px"
+        type="submit"
+      >
+        Submit
+      </button>
+      <button mat-raised-button color="warn" type="reset">Reset</button>
+    </div>
+  </form>
+  <div class="container text-right">
+    <button mat-raised-button color="primary" (click)="openLogin()">
+      If you have an Account !
+    </button>
+  </div>
+</mat-dialog-content>

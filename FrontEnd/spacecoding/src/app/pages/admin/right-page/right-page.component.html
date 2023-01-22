@@ -1,0 +1,43 @@
+<div class="row cm" >
+     <div class="container-fluid">
+           <button mat-button class="active">
+              <mat-icon>menu</mat-icon>
+           </button>
+           <mat-divider></mat-divider>
+           <button mat-button>
+              <mat-icon >home</mat-icon><span style="color: rgb(12, 11, 11);">Home</span>
+           </button>
+           <mat-divider></mat-divider>
+           <button mat-button  routerLink="/admin/">
+              <mat-icon >account_circle</mat-icon><span style="color: rgb(10, 7, 7);">{{user.fullname}}</span>
+           </button>
+           <mat-divider></mat-divider>
+           <button mat-button routerLink="/admin/answerquestion">
+            <mat-icon>quiz</mat-icon><span style="color: rgb(10, 8, 8);">Add QuetionAnswer</span>
+           </button>
+           <mat-divider></mat-divider>
+           <button mat-button routerLink="/admin/listofQueAns">
+              <mat-icon>list</mat-icon><span style="color: rgb(15, 12, 12);"> List of The QuestionAnswer</span>             
+           </button>
+           <mat-divider></mat-divider>
+           <button mat-button routerLink="/admin/viewcategory">
+              <mat-icon>category</mat-icon><span style="color: rgb(13, 11, 11);"> Categories</span>             
+           </button>
+           <mat-divider></mat-divider>
+           <button mat-button routerLink="/admin/addcategory">
+              <mat-icon>add_circle</mat-icon><span style="color: rgb(13, 11, 11);"> Add Category</span>             
+           </button>
+           <mat-divider></mat-divider>
+           <button mat-button routerLink="/admin/viewquiz">
+              <mat-icon>quiz</mat-icon><span style="color: rgb(13, 11, 11);"> Quizzes</span>             
+           </button>
+         <mat-divider></mat-divider>
+           <button mat-button routerLink="/admin/addquiz">
+              <mat-icon>add_circle</mat-icon><span style="color: rgb(13, 11, 11);"> Add Quiz</span>             
+           </button>
+         <mat-divider></mat-divider>        
+           <button mat-button>
+              <mat-icon (click)="logout()">logout</mat-icon><span style="color: rgb(12, 11, 11);"> Logout</span>
+           </button>
+        </div>
+</div>

@@ -1,0 +1,11 @@
+mat-card{
+    margin-bottom: 5px;
+    background-color: rgb(219, 217, 237);
+}
+img{
+    width: 100%;
+    border-radius: 10px;
+}
+#ct{
+    background-color: aliceblue;
+}

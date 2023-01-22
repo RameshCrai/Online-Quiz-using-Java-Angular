@@ -1,0 +1,23 @@
+mat-card{
+    background-color: aliceblue;
+}
+.f{
+    width: 100%;
+}
+.hl{
+  width: 50%;
+  margin-right: 10%;
+}
+.mr{
+    margin-right: 5%;
+}
+.hll{
+    width: 100%;
+}
+.ml{
+    margin-right: 0px;
+}
+
+.col-md-6{
+    background-color: aliceblue;
+}

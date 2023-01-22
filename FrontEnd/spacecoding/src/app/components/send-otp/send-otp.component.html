@@ -1,0 +1,15 @@
+<mat-dialog-actions align="end">
+    <button mat-dialog-close>&times;</button>
+</mat-dialog-actions>
+<mat-dialog-content>
+    <form>
+        <mat-form-field appearance="outline" hintLabel="OTP should be valided!!!">
+            <mat-label>Send OTP</mat-label>
+            <input type="text" matInput placeholder="Enter valid OTP" #input maxlength="6">
+            <mat-hint align="end">{{input.value.length || 0}}/6</mat-hint>
+        </mat-form-field>
+        <div class="container mt-2">
+            <button class="btn-block" mat-raised-button color="warn" type="submit" (click)="SavePassword()">Send</button>
+        </div>        
+    </form>
+</mat-dialog-content>

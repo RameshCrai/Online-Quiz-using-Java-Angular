@@ -1,0 +1,46 @@
+<mat-card>
+  <mat-card-header>
+    <div class="container text-center">
+      <img
+        src="../../../../assets/default.jpg"
+        style="width: 10%"
+        alt=""
+        srcset=""
+      /><br />
+      <button mat-raised-button color="accent">Upload Image</button>
+    </div> </mat-card-header
+  ><br />
+  <mat-divider></mat-divider><br />
+  <mat-card-content>
+    <mat-card>
+      <div class="row">
+        <div class="col-md-6">
+          <h4>UserId : <span>{{user.id}}</span></h4>
+          <mat-divider></mat-divider>
+          <h4>Fullname : <span>{{user.fullname}}</span></h4>
+          <mat-divider></mat-divider>
+          <h4>Phone Number : <span>{{user.phone}}</span></h4>
+          <mat-divider></mat-divider>
+          <h4>Gender : <span>{{user.gender}}</span></h4>
+        </div>
+        <div class="col-md-6">
+          <h4>Status : <span>{{user.enabled?"ACTIVE":"NOTACTIVE"}}</span></h4>
+          <mat-divider></mat-divider>
+          <h4>Email : <span>{{user.email}}</span></h4>
+          <mat-divider></mat-divider>
+          <h4>Zipcode : <span>{{user.zipcode}}</span></h4>
+          <mat-divider></mat-divider>
+          <h4>RoleName : <span>{{user.authorities[0].authority}}</span></h4> 
+        </div>
+        <mat-divider></mat-divider>
+        <div class="container">
+          <button mat-raised-button color="warn">Change Password</button>
+          <button mat-raised-button color="primary" style="margin: 5px">
+            Change Email
+          </button>
+          <button mat-raised-button color="accent">Change Phone Number</button>
+        </div>
+      </div>
+    </mat-card>
+  </mat-card-content>
+</mat-card>

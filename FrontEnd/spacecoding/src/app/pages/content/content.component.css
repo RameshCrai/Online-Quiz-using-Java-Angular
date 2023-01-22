@@ -1,0 +1,66 @@
+mat-card{
+    width: 100%;
+    background-color: #f1eef1;
+    left: 0;
+    right: 0;   
+    margin-bottom: 10px; 
+    margin-top: 5px;
+}
+mat-form-field{
+    width: 100%;
+}
+
+mat-radio-button{
+    margin-right: 15px;
+}
+article{
+    text-align: justify;
+    padding: 15px;
+}
+article:hover{
+    color: rgb(61, 39, 27);
+    font-size: 18px;
+}
+span{
+
+    font-size: x-large;
+}
+img{
+    width: 100%;
+    border-radius: 10px;
+}
+p{
+    font-size: x-large;
+    color: rgb(225, 31, 31);
+}
+.v{
+    border-right:4px solid rgb(4, 18, 4);
+    height: 200px;
+}
+#im{
+    width: 100%;
+    height: 90%;
+    
+}
+#im:hover{
+    border: 2px solid black;
+
+}
+.g:hover{
+    color: rgb(8, 24, 173);
+    font-size: 18px;
+}
+#mb{
+    margin-bottom: 10px;
+}
+#mb:hover{
+    background-color: azure;
+    box-shadow: 5px 5px;
+}
+#ga{
+    height: 200px;
+}
+h6{
+    font-size: 16px;
+    font-family: cursive;
+}

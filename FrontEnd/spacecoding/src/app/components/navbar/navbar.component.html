@@ -1,0 +1,104 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary" *ngIf="!isLoggedIn">
+  <h1 class="mr-5"><strong>RAMESHRAI</strong></h1>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="web"
+          >Web<span class="sr-only">(current)</span></a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="mobile">Mobile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="artificial">Artificial</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="block">Blockchain</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="cyber">Cyber</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" hidden>ROCKET</a>
+      </li>
+      <li class="nav-item dropdown">
+          <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+          >
+            DSA
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <button class="dropdown-item" routerLink="infixtopos">Infix to postfix</button>
+            <button class="dropdown-item" routerLink="infixtoPre">Infix to prefix</button>
+            <button class="dropdown-item" routerLink="posttoinfix">Postfix to infix</button>
+            <button class="dropdown-item" routerLink="prefixtoinfix">Prefix to infix</button>
+            <button class="dropdown-item" routerLink="evaluatepost">Eva-postfix</button>
+            <button class="dropdown-item" routerLink="evaluatepre">Eva-prefix</button>
+          </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          SIGN
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <button  class="dropdown-item" (click)="openLogin()">
+            Login</button
+          ><br />
+          <button  class="dropdown-item" (click)="openRegiter()">
+            Register
+          </button>
+          <div class="dropdown-divider"></div>
+          <button  class="dropdown-item">Contact</button>
+        </div>
+      </li>
+    </ul>
+    <span>
+      <button mat-button>
+        <img
+            src="../../../assets/nepal.png"
+            style="background-color: white; border-radius: 50%"
+            alt=""
+            srcset=""
+        />
+      </button>
+    </span>
+    <form class="form-inline">
+      <input
+        matInput
+        class="form-control"
+        type="search"
+        placeholder="Search......"
+      />
+      <button mat-raised-button color="success" type="submit">
+        <mat-icon>search</mat-icon>
+      </button>
+    </form>
+  </div>
+</nav>

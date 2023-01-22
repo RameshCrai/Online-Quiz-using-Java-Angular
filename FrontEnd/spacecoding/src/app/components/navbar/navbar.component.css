@@ -1,0 +1,45 @@
+nav{
+  width: 100%;
+  left: 0;
+  top: 0;
+
+}
+.nav-link{
+  margin-right: 10px;
+}
+ul li a{
+  color: rgb(243, 235, 235);
+  font-size: 16px;
+}
+ul li a:hover{
+  background-color: rgb(197, 191, 183);
+  color: rgb(18, 15, 223);
+  border-radius: 10px;
+
+}
+h1{
+  color: aliceblue;
+  margin-top: 10px;
+}
+
+.form-inline{
+
+  margin-left: 190px;
+
+}
+input{
+
+  background-color: white;
+
+}
+
+@media(max-width:860px){
+  .form-inline{
+      margin-left: 0;
+      width: 50%;
+  }
+  .dropdown-menu{
+    margin-left: 0;
+    width: 30%;
+  }
+}

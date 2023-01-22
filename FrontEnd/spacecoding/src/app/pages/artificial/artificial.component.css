@@ -1,0 +1,13 @@
+mat-card{
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: rgb(219, 217, 237);
+}
+
+#v{
+    background-color: aliceblue;
+}
+p{
+    text-align: justify;
+}
+

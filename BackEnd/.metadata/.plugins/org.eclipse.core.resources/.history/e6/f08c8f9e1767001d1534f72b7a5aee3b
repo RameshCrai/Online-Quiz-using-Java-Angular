@@ -1,0 +1,23 @@
+package com.Spacecoding.service;
+
+import java.util.Set;
+
+import org.springframework.http.ResponseEntity;
+
+import com.Spacecoding.model.exam.Quiz;
+
+public interface QuizService {
+	
+	public Quiz addQuiz(Quiz quiz);
+	
+	public Quiz updateQuiz(Quiz quiz);
+	
+	public Set<Quiz> getAllQuizess();
+	
+	public Quiz getQuiz(Long id);
+	
+	public void deleteQuiz(Long id);
+	
+	ResponseEntity<?> getAllQuizessOfCategory(Long cid);
+
+}
